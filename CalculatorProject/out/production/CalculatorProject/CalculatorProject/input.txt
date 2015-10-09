@@ -1,0 +1,6 @@
+a=b; //comment
+  + 5 31 ;
+  asdf = a;
+b = + * A 4 - 5 4;
+
+quit;

@@ -1,0 +1,29 @@
+*** Welcome to the Calculator Program!!! ***
+Enter input file name and extension:
+input.txt
+*** Welcome to the Scanner ***
+Variable: a
+Assignment: =
+Integer: 3
+Semicolon: ;
+NEW LINE
+Operator: +
+Integer: 5
+Integer: 31
+Semicolon: ;
+NEW LINE
+Variable: b
+Assignment: =
+Operator: +
+Operator: *
+Variable: A
+Integer: 4
+Operator: -
+Integer: 5
+Integer: 4
+Semicolon: ;
+NEW LINE
+Keyword Quit: quit
+Semicolon: ;
+NEW LINE
+Successfully scanned the input file and all tokens are valid!
