@@ -12,7 +12,9 @@ public class parser {
 
     //Creating and passing a Position object creates a similar effect as "pass-by-reference"
     public class Position {
-        public int x=0;
+        public int x = 0;
+        public int val = 0;
+        public boolean quitProgram = false;
     }
 
     Position pos = new Position();
@@ -60,16 +62,23 @@ public class parser {
 
         //evaluates syntax for production L -> quit;
         if (tokens.get(pos.x).type == 5 && pos.x != lt) { //type 5 = quit
+            pos.quitProgram = true;
             pos.x++;
         }
 
         //check for semicolon at end
         if(tokens.get(pos.x).type == 3 && pos.x == lt) {
-            return;
+            if (pos.quitProgram) {
+                System.out.println("End of program.");
+                System.exit(0);
+            } else {
+                System.out.println(pos.val);
+                return;
+            }
         } else if (pos.x == 0) {
             System.out.println("**Parse Error (Line: " + l + ", Position: " + pos.x + ") A semicolon is not a valid statement");
             System.exit(0);
-        }else {
+        } else {
             System.out.println("**Parse Error (Line: " + l + ", Position: " + pos.x + ") Semi-colon expected");
             System.exit(0);
         }
@@ -81,9 +90,16 @@ public class parser {
         int lt = lastToken;
         int l = line;
 
-        //evaluates syntax for production E -> var | op
-        if ((tokens.get(pos.x).type == 4 || tokens.get(pos.x).type == 0) && pos.x != lt) { //type 4 = var or type 0 = int
+        //evaluates syntax for production E -> var
+        if ((tokens.get(pos.x).type == 4) && pos.x != lt) { //type 4 = var
             pos.x++; return;
+        }
+
+        //evaluates syntax for production E -> int
+        if ((tokens.get(pos.x).type == 0) && pos.x != lt) { //type 0 = int
+            pos.val = Integer.parseInt(tokens.get(pos.x).value);
+            pos.x++;
+            return;
         }
 
         //Displays an error message and exits program if the token being evaluated is not a variable, integer, or operator
