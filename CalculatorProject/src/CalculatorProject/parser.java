@@ -18,7 +18,7 @@ public class parser {
     Position pos = new Position();
 
     public parser(ArrayList<ArrayList<Token>> tokenList) {
-        System.out.println("*** Welcome to the Parser! ***");
+        System.out.println("*** Welcome to the Parser and Semantic Analyzer! ***");
 
         int numOfLines = tokenList.size();
         //System.out.println(tokenList.size());
