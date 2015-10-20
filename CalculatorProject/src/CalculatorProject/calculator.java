@@ -3,7 +3,7 @@ package CalculatorProject;
 /**
  * @author Ashley Zegiestowsky
  * Created: September 10, 2015
- * Last Updated: Semptember 14, 2015
+ * Last Updated: October 19, 2015
  * CS441: Organization of Programming Languages
  * Description: A calculator program that consists of a scanner, parser, and semantic analyzer
  */
@@ -26,3 +26,25 @@ public class calculator {
         parser p = new parser(s.validLinesArray);
     }
 }
+
+/*
+SAMPLE INPUT FILE: input.txt
+a=3; //comment
+  + 5 31 ;
+b = + * A 4 - 5 4;
+testVar = 10 ;
++ ^ testVar 2 - a B;
+quit;
+
+
+SAMPLE OUTPUT:
+*** Welcome to the Calculator Program!!! ***
+Enter input file name and extension:
+input.txt
+3
+36
+13
+10
+90
+End of program.
+*/

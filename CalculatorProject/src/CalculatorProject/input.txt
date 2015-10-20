@@ -1,6 +1,6 @@
 a=3; //comment
   + 5 31 ;
-  d = a;
 b = + * A 4 - 5 4;
-
+testVar = 10 ;
++ ^ testVar 2 - a B;
 quit;

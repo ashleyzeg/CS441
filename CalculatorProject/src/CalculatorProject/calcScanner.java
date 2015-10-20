@@ -3,7 +3,7 @@ package CalculatorProject;
 /**
  * @author Ashley Zegiestowsky
  * Created: September 10, 2015
- * Last Updated: Semptember 14, 2015
+ * Last Updated: October 19, 2015
  * CS441: Organization of Programming Languages
  * Description: The Scanner (part of calculator program) takes an input data file and prints out a list of tokens and their token types.
  * If the input includes characters not consistent with a token, the program stops and prints an error message.
@@ -17,13 +17,10 @@ import java.util.ArrayList;
 public class calcScanner {
 
     public ArrayList<ArrayList<Token>> validLinesArray = new ArrayList<ArrayList<Token>>();
-    //public ArrayList validLinesArray = new ArrayList();
 
     public calcScanner(File input) throws FileNotFoundException {
-        System.out.println("*** Welcome to the Scanner ***");
 
         ArrayList<String> lines = new ArrayList<String>();
-        //ArrayList<ArrayList<Token>> validLinesArray = new ArrayList<ArrayList<Token>>();
 
         try {
 
@@ -35,12 +32,10 @@ public class calcScanner {
 
         //loop through each line to find tokens
         for(int i = 0; i < lines.size(); i++) {
-            //ArrayList<Token> validTokensArray = new ArrayList<Token>();
             ArrayList<Token> validTokensArray = new ArrayList<Token>();
             String currentLine = lines.get(i);
             Integer lineNum = i + 1;
-            Integer tokenCount = 0;
-            System.out.println("**Line " + lineNum + ":" +currentLine);
+            //System.out.println("**Line " + lineNum + ":" +currentLine);
 
             //EXTRA CREDIT: Checks for comments at the beginning or end of a line
             if (currentLine.startsWith("//")) {
@@ -53,7 +48,6 @@ public class calcScanner {
             Scanner tokens = new Scanner(currentLine);
             while(tokens.hasNext()) {
                 String currentToken = tokens.next();
-                //String validToken = "";
                 Token validToken;
 
                 if (currentToken.length() > 1) {
@@ -61,23 +55,20 @@ public class calcScanner {
 
                     for(int nt = 0; nt < newTokens.length; nt++) {
                         validToken = scanToken(newTokens[nt], lineNum);
-                        tokenCount++;
                         validTokensArray.add(validToken);
                     }
                 } else {
                     validToken = scanToken(currentToken, lineNum);
-                    tokenCount++;
                     validTokensArray.add(validToken);
                 }
 
             }
 
             validLinesArray.add(validTokensArray);
-            //System.out.println("**Token Count: " + tokenCount);
-            System.out.println("NEW LINE");
+            //System.out.println("NEW LINE");
         }
 
-        System.out.println("Successfully scanned the input file and all tokens are valid!");
+        //System.out.println("Successfully scanned the input file and all tokens are valid!");
 
     }
 
@@ -88,10 +79,9 @@ public class calcScanner {
      * @param t the token string that is evaluated and split into smaller tokens
      * @return the array of tokens after being evaluated and split accordingly
      */
-    public String[] splitTokens(String t) { //TODO: maybe refactor to switch statement
+    public String[] splitTokens(String t) {
         String[] newTokens = new String[1]; //initialized as size 1 because atleast 1 token will be returned
-        //TODO: maybe use recursion
-        //TODO: add condition to split tokens by variable name
+
         if (t.toLowerCase().startsWith("quit")) {		//checks to see if string contains 'quit'
             newTokens = t.split("((?<=quit)|(?=quit))"); //splits string on regex "quit", but keeps delimiters in array
         //EXTRA CREDIT: Allows for variables longer than one character
@@ -110,7 +100,7 @@ public class calcScanner {
      * is included in the accepted list of tokens
      * @param t token value to be evaluated
      * @param line line number of current token
-     * @return If the token is valid, the token value is returned. If the token is invalid, an error message occurs
+     * @return If the token is valid, the token object is returned. If the token is invalid, an error message occurs
      * and the program stops further execution
      */
     public Token scanToken(String t, Integer line) {
@@ -124,10 +114,6 @@ public class calcScanner {
         t5 = isVariableName(t);
         t6 = isQuit(t);
 
-//        if (t1.type == 6 || t2.equals("") && t3.equals("") && t4.equals("") && t5.equals("") && t6.equals("")) {
-//            System.out.println("**Invalid Token: " + t + ", Line: " + line);
-//            System.exit(0);
-//        }
         if (t1.type != 6) temp = t1;
         else if (t2.type != 6) temp = t2;
         else if (t3.type != 6) temp = t3;
@@ -144,11 +130,12 @@ public class calcScanner {
     /**
      * Method & Desc: isInteger, This method checks the token to see if it is an integer
      * @param t token to be evaluated
-     * @return If t is an Integer, return t. If t is not an integer, return the empty string
+     * @return If t is an Integer, return Token object with value of t and type 'INT'.
+     * If t is not an integer, return the empty string
      */
     public static Token isInteger(String t) {
         if (t.matches("\\d+")) {
-            System.out.println("Integer: " + t);
+            //System.out.println("Integer: " + t);
             return new Token(t, Token.INT);
         } else return new Token(t, Token.INVALID);
     }
@@ -156,11 +143,12 @@ public class calcScanner {
     /**
      * Method & Desc: isArithmeticOperators, This method checks the token to see if it is an accepted operator
      * @param t token to be evaluated
-     * @return If t is an operator, return t. If t is not an operator, return the empty string
+     * @return If t is an operator, return Token object with value of t and type 'OP'.
+     * If t is not an operator, return the empty string
      */
     public Token isArithmeticOperators(String t) {
         if (t.matches("[(\\+|\\*|\\-|\\/|\\%|\\^)]")) {
-            System.out.println("Operator: " + t);
+            //System.out.println("Operator: " + t);
             return new Token(t, Token.OP);
         } else return new Token(t, Token.INVALID);
     }
@@ -168,11 +156,12 @@ public class calcScanner {
     /**
      * Method & Desc: isAssignmentOperators, This method checks the token to see if it is an assignment operator
      * @param t token to be evaluated
-     * @return If t is an assignment operator, return t. If t is not an assignment operator, return the empty string
+     * @return If t is an assignment operator, return Token object with value of '=' and type 'ASSIGN'.
+     * If t is not an assignment operator, return the empty string
      */
     public Token isAssignmentOperators(String t) {
         if (t.matches("=")) {
-            System.out.println("Assignment: " + t);
+            //System.out.println("Assignment: " + t);
             return new Token(t, Token.ASSIGN);
         } else return new Token(t, Token.INVALID);
     }
@@ -180,11 +169,12 @@ public class calcScanner {
     /**
      * Method & Desc: isSemicolon, This method checks the token to see if it is an semicolon
      * @param t token to be evaluated
-     * @return If t is an semicolon, return t. If t is not an semicolon, return the empty string
+     * @return If t is an semicolon, return Token object with value of t and type 'SEMI'.
+     * If t is not an semicolon, return the empty string
      */
     public Token isSemicolon(String t) {
         if (t.matches(";")) {
-            System.out.println("Semicolon: " + t);
+            //System.out.println("Semicolon: " + t);
             return new Token(t, Token.SEMI);
         } else return new Token(t, Token.INVALID);
     }
@@ -193,13 +183,13 @@ public class calcScanner {
      * Method & Desc: isVariableName, This method checks the token to see if it is a variable name/identifier
      * that is a single character
      * @param t token to be evaluated
-     * @return If t is an variable name, return t. If t is not an variable name, return the empty string
+     * @return If t is an variable name, return Token object with value of t and type 'VAR'.
+     * If t is not an variable name, return the empty string
      */
     public Token isVariableName(String t) {
         //EXTRA CREDIT: Allows for variables longer than one character
         if (t.matches("[a-zA-Z]+") && !t.toLowerCase().contains("quit")) {
-        //if (t.matches("\\w+") && !t.toLowerCase().contains("quit")) {
-            System.out.println("Variable: " + t);
+            //System.out.println("Variable: " + t);
             return new Token(t, Token.VAR);
         } else return new Token(t, Token.INVALID);
     }
@@ -207,11 +197,12 @@ public class calcScanner {
     /**
      * Method & Desc: isQuit, This method checks the token to see if it is the keyword quit
      * @param t token to be evaluated
-     * @return If t is the keyword quit, return t. If t is not the keyword quit, return the empty string
+     * @return If t is the keyword quit, return Token object with value 'quit' and type 'QUIT'.
+     * If t is not the keyword quit, return the empty string
      */
     public Token isQuit(String t) {
         if (t.toLowerCase().matches("quit")) {
-            System.out.println("Keyword Quit: " + t);
+            //System.out.println("Keyword Quit: " + t);
             return new Token(t, Token.QUIT);
         } else return new Token(t, Token.INVALID);
     }
@@ -232,7 +223,6 @@ public class calcScanner {
 
             while(in.hasNextLine()) {
                 String next = in.nextLine();
-                //System.out.println(next);
                 linesArray.add(next);
             }
 

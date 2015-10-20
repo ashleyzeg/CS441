@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a036bce-d141-4dbf-9218-1cfc715248b4" name="Default" comment="">
+    <list default="true" id="5a036bce-d141-4dbf-9218-1cfc715248b4" name="Default" comment="added semantic analysis for productions...&#10;L -&gt; quit;&#10;L -&gt; E; (when E -&gt; i)&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CalculatorProject/CalculatorProject/parser$Position.class" afterPath="$PROJECT_DIR$/out/production/CalculatorProject/CalculatorProject/parser$Position.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CalculatorProject/CalculatorProject/parser.class" afterPath="$PROJECT_DIR$/out/production/CalculatorProject/CalculatorProject/parser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalculatorProject/calcScanner.java" afterPath="$PROJECT_DIR$/src/CalculatorProject/calcScanner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalculatorProject/calculator.java" afterPath="$PROJECT_DIR$/src/CalculatorProject/calculator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CalculatorProject/CalculatorProject/input.txt" afterPath="$PROJECT_DIR$/out/production/CalculatorProject/CalculatorProject/input.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalculatorProject/input.txt" afterPath="$PROJECT_DIR$/src/CalculatorProject/input.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalculatorProject/parser.java" afterPath="$PROJECT_DIR$/src/CalculatorProject/parser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -30,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/CalculatorProject/calculator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -39,11 +44,10 @@
       <file leaf-file-name="parser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CalculatorProject/parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11221945">
-              <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+            <state vertical-scroll-proportion="3.0673316">
+              <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
               <folding>
-                <element signature="docComment;class#parser#0" expanded="false" />
-                <element signature="e#1523#1554#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,20 +57,8 @@
         <entry file="file://$PROJECT_DIR$/src/CalculatorProject/calcScanner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-              <folding>
-                <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-                <element signature="e#3577#3604#0" expanded="false" />
-                <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-                <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-                <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-                <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-                <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-                <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-                <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-                <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-                <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-              </folding>
+              <caret line="158" column="84" selection-start-line="158" selection-start-column="84" selection-end-line="158" selection-end-column="84" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/CalculatorProject/input.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -113,9 +105,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/CalculatorProject/output.txt" />
         <option value="$PROJECT_DIR$/src/CalculatorProject/Token.java" />
-        <option value="$PROJECT_DIR$/src/CalculatorProject/calcScanner.java" />
-        <option value="$PROJECT_DIR$/src/CalculatorProject/calculator.java" />
         <option value="$PROJECT_DIR$/src/CalculatorProject/input.txt" />
+        <option value="$PROJECT_DIR$/src/CalculatorProject/calculator.java" />
+        <option value="$PROJECT_DIR$/src/CalculatorProject/calcScanner.java" />
         <option value="$PROJECT_DIR$/src/CalculatorProject/parser.java" />
       </list>
     </option>
@@ -150,9 +142,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -191,6 +182,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,12 +387,18 @@
       <option name="project" value="LOCAL" />
       <updated>1445285658228</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added semantic analysis for productions...&#10;L -&gt; quit;&#10;L -&gt; E; (when E -&gt; i)&#10;">
+      <created>1445287817239</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1445287817239</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -408,23 +406,23 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39726028" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39670658" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32784432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2253635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41232878" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2253635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41232878" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -440,11 +438,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started work on semantic analyzer" />
-    <option name="LAST_COMMIT_MESSAGE" value="started work on semantic analyzer" />
+    <MESSAGE value="added semantic analysis for productions...&#10;L -&gt; quit;&#10;L -&gt; E; (when E -&gt; i)&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added semantic analysis for productions...&#10;L -&gt; quit;&#10;L -&gt; E; (when E -&gt; i)&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="49" />
+      <option name="time" value="65" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -466,8 +465,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#parser#0" expanded="false" />
-            <element signature="e#1523#1554#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -476,19 +474,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-            <element signature="e#3577#3604#0" expanded="false" />
-            <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-            <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -521,8 +507,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#parser#0" expanded="false" />
-            <element signature="e#1523#1554#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -531,19 +516,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-            <element signature="e#3577#3604#0" expanded="false" />
-            <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-            <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -576,8 +549,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#parser#0" expanded="false" />
-            <element signature="e#1523#1554#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -586,19 +558,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-            <element signature="e#3577#3604#0" expanded="false" />
-            <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-            <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -631,8 +591,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#parser#0" expanded="false" />
-            <element signature="e#1523#1554#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -641,19 +600,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-            <element signature="e#3577#3604#0" expanded="false" />
-            <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-            <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -686,8 +633,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#parser#0" expanded="false" />
-            <element signature="e#1523#1554#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -696,19 +642,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-            <element signature="e#3577#3604#0" expanded="false" />
-            <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-            <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -741,8 +675,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#parser#0" expanded="false" />
-            <element signature="e#1523#1554#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -751,19 +684,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-            <element signature="e#3577#3604#0" expanded="false" />
-            <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-            <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -796,8 +717,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#parser#0" expanded="false" />
-            <element signature="e#1523#1554#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -806,19 +726,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-            <element signature="e#3577#3604#0" expanded="false" />
-            <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-            <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -857,19 +765,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-            <element signature="e#3577#3604#0" expanded="false" />
-            <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-            <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -900,19 +796,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-            <element signature="e#3577#3604#0" expanded="false" />
-            <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-            <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -946,14 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CalculatorProject/calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CalculatorProject/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -962,41 +838,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CalculatorProject/calcScanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="docComment;method#splitTokens#0;class#calcScanner#0" expanded="false" />
-            <element signature="e#3577#3604#0" expanded="false" />
-            <element signature="docComment;method#scanToken#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isInteger#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isArithmeticOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isAssignmentOperators#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isSemicolon#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isVariableName#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#isQuit#0;class#calcScanner#0" expanded="false" />
-            <element signature="docComment;method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-            <element signature="method#readFileToArray#0;class#calcScanner#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CalculatorProject/input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CalculatorProject/calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CalculatorProject/calcScanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="158" column="84" selection-start-line="158" selection-start-column="84" selection-end-line="158" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CalculatorProject/parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11221945">
-          <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+        <state vertical-scroll-proportion="3.0673316">
+          <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#parser#0" expanded="false" />
-            <element signature="e#1523#1554#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
